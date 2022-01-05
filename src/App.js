@@ -1,3 +1,3 @@
-export default function App() {
-  return "Nikhil";
-}
+const App = ()=> "This is Nikhil..."
+
+export default App;
