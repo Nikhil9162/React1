@@ -2,16 +2,24 @@ import { useState } from "react";
 
 export default function App(){
 
-  let [counter, setcounter] = useState(100);
+  const [list, setlist] = useState([]);
 
-  const increment = () => setcounter(counter+1);
-  const decrement = () => setcounter(counter-1);
+  const tweet = ()=> {
+    setlist([...list, 1]);
+  };
 
-  return (
+  return(
     <div>
-      <div>{counter}</div>
-      <input type="button" value="Incr" onClick={increment} />
-      <input type="button" value="Decr" onClick={decrement}/>
+      <input type="button" value="tweet" onClick={tweet}/>
+
+      {
+        list.map(() => (
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium commodi perferendis explicabo praesentium corrupti aliquam assumenda error sapiente odit est hic ea, doloremque vero rerum, non neque quibusdam expedita obcaecati.
+          </div>
+        )
+        )
+      }
     </div>
   );
 }
