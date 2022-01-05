@@ -1,12 +1,17 @@
+import { useState } from "react";
+
 export default function App(){
-  let name="Nikhil";
-  let phoneno = 6464373738;
-  let email= "Nikhil@121.com";
-  return(
+
+  let [counter, setcounter] = useState(100);
+
+  const increment = () => setcounter(counter+1);
+  const decrement = () => setcounter(counter-1);
+
+  return (
     <div>
-      <div>{name}</div>
-      <div>{phoneno}</div>
-      <div>{email}</div>
+      <div>{counter}</div>
+      <input type="button" value="Incr" onClick={increment} />
+      <input type="button" value="Decr" onClick={decrement}/>
     </div>
-  )
+  );
 }
